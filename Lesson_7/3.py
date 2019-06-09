@@ -6,18 +6,3 @@
 массива. Но если это слишком сложно, то используйте метод сортировки,
  который не рассматривался на уроках
 """
-from random import randint
-
-
-def med_lst(lst):
-    while len(lst) != 1:
-        lst.pop(lst.index(min(lst)))
-        lst.pop(lst.index(max(lst)))
-    return lst[0]
-
-
-m = int(input('Введите m, где m - это длина массива 2m + 1: '))
-lst = [randint(0, 50) for _ in range(0, 2 * m + 1)]
-
-print(lst)
-print(med_lst(lst))
